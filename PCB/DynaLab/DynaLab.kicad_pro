@@ -293,31 +293,23 @@
         "Used other component symbol with compatible pinout."
       ],
       [
-        "four_way_junction|1219200|3429000|6efa1fc9-f5af-4e6f-a2df-77696ba8d39a|2fb7fb3e-6969-4ee6-baef-930107523d7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b||",
-        ""
-      ],
-      [
-        "four_way_junction|1371600|3594100|3366575e-7994-4a6e-9545-3ab2a00d1a53|91f25a02-7717-47e6-a678-d46816d9a529|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b||",
-        ""
-      ],
-      [
-        "four_way_junction|1485900|3429000|50f90eab-93ad-4f08-9965-dc510ef681de|99d08e61-5352-422f-b533-0a3861b5269d|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b||",
-        ""
-      ],
-      [
-        "four_way_junction|3784600|2032000|238282c8-3745-488b-9119-13136ecf22fc|7ef5504e-3120-4c74-8cf5-f311dc821576|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b||",
-        ""
-      ],
-      [
-        "four_way_junction|3784600|2032000|d944083f-62c5-4161-8fe2-8643abc18671|238282c8-3745-488b-9119-13136ecf22fc|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b||",
-        ""
+        "footprint_link_issues|774700|3429000|aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9|00000000-0000-0000-0000-000000000000|||",
+        "Chosen component has 1206 footprint"
       ],
       [
         "power_pin_not_driven|2108200|431800|7dcd1f11-7cea-4add-9185-b999727587fc|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
         "Power flag not used"
       ],
       [
+        "power_pin_not_driven|4432300|228600|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
+        ""
+      ],
+      [
         "power_pin_not_driven|4432300|279400|04df4746-e888-4443-8c56-44b5fef1444c|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|533400|3429000|a19be79e-5c74-4270-ba31-520343cb5fc3|00000000-0000-0000-0000-000000000000|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|/e408f3f6-5db2-41f4-a4ee-1704a305cc7b|",
         ""
       ]
     ],
@@ -545,7 +537,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Encoder with Amp.kicad_pro",
+    "filename": "DynaLab.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -569,6 +561,16 @@
         "wire_width": 6
       },
       {
+        "clearance": 0.2,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.35
+      },
+      {
         "clearance": 0.15,
         "diff_pair_gap": 0.16,
         "diff_pair_width": 0.8,
@@ -576,7 +578,7 @@
         "microvia_drill": 0.1,
         "name": "USB Data",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.15,
         "via_diameter": 0.6,
@@ -592,6 +594,14 @@
       {
         "netclass": "USB Data",
         "pattern": "/USB_D*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VBUS"
       }
     ]
   },
