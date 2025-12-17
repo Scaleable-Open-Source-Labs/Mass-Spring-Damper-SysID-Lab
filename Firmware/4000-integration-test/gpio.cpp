@@ -9,12 +9,6 @@ void gpio_initialise() {
   pinMode(ledRec, OUTPUT);
 }
 
-void disable_linear_encoder() {
-  detachInterrupt(digitalPinToInterrupt(chA));
-  detachInterrupt(digitalPinToInterrupt(chB));
-  detachInterrupt(digitalPinToInterrupt(chC));
-}
-
 
 // Read current encoder state (3-bit value)
 uint8_t readEncoderState() {

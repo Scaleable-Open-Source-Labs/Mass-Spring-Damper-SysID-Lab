@@ -32,12 +32,12 @@
 #define LSB(x) ((x) & 0xFF)
 #define MSB(x) (((x) >> 8) & 0xFF)
 
-#define README_CONTENTS                                                        \
-  "Follow these steps to run an experiment.\n\
+#define README_CONTENTS \
+"Follow these steps to run an experiment.\n\
 \n\
-Note, MassSpring drive will unmount during this process. Copy these instructions to your computer before beginning if necessary.\n\
+Note: copy these instructions to your computer before beginning if necessary. \n\
 \n\
-1: Press the ZERO button\n\
+1: Press the ZERO button \n\
 2: Move the mass to the desired initial displacement\n\
 3: Press the REC button (status light shows recording)\n\
 4: Release the mass and allow to oscillate.\n\
@@ -119,7 +119,7 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
     //------------- Block2: Root Directory -------------//
     {
         // first entry is volume label
-        'M', 'a', 's', 's', 'S', 'p', 'r', 'i', 'n', 'g', ' ', 0x08, 0x00, 0x00,
+        'D', 'y', 'n', 'a', 'L', 'a', 'b', ' ', ' ', ' ', ' ', 0x08, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4F, 0x6D, 0x65, 0x43,
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 

@@ -17,7 +17,6 @@
 
 // Function Prototypes
 void gpio_initialise(void);
-void disable_linear_encoder(void);
 uint8_t readEncoderState(void);
 
 
