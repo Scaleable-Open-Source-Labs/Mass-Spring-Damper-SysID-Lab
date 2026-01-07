@@ -1,7 +1,8 @@
 /*
  * The MIT License (MIT)
  *
- * Copyright (c) 2019 Ha Thach for Adafruit Industries
+ * Copyright (c) 2025 Michael Ruppe for Monash University
+ * Based off the ramdisk example by Ha Thach for Adafruit Industries 2019
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,14 +27,15 @@
 #define RAMDISK_H_
 
 // 8KB is the smallest size that windows allow to mount
-#define DISK_BLOCK_NUM  64  // Use to set disk size. 32*512 = 16kB => 2000 data points. Each data entry is 8 bytes: 6 bytes (uint32_t, int) + 1-byte comma + 1-byte newline
-#define DISK_BLOCK_SIZE 512 // leave block size fixed
+#define DISK_BLOCK_NUM  64  // Use to set disk size. 64*512 = 32kB.
+#define DISK_BLOCK_SIZE 512
 
 #define LSB(x) ((x) & 0xFF)
 #define MSB(x) (((x) >> 8) & 0xFF)
 
 #define README_CONTENTS \
-"Follow these steps to run an experiment.\n\
+"DynaLab v0.1\n\n\
+Follow these steps to run an experiment.\n\
 \n\
 Note: copy these instructions to your computer before beginning if necessary. \n\
 \n\
@@ -51,13 +53,13 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
     // 1; fat12_root_entry_num = 16; sector_per_fat     = 1; sector_per_track =
     // 1; head_num = 1; hidden_sectors = 0; drive_number       = 0x80;
     // media_type = 0xf8; extended_boot_signature = 0x29; filesystem_type    =
-    // "FAT12   "; volume_serial_number = 0x1234; volume_label = "TinyUSB MSC";
+    // "FAT12   "; volume_serial_number = 0x1337; volume_label = "DynaLab";
     // FAT magic code at offset 510-511
     {0xEB, 0x3C, 0x90, 0x4D, 0x53, 0x44, 0x4F, 0x53, 0x35, 0x2E, 0x30, LSB(DISK_BLOCK_SIZE),
      MSB(DISK_BLOCK_SIZE), 0x01, 0x01, 0x00, 0x01, 0x10, 0x00, LSB(DISK_BLOCK_NUM), MSB(DISK_BLOCK_NUM), 0xF8, 0x01, 0x00,
      0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-     0x80, 0x00, 0x29, 0x34, 0x12, 0x00, 0x00, 'M', 'a', 's', 's', 'S', 'p',
-     'r', 'i', 'n', 'g', ' ', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
+     0x80, 0x00, 0x29, 0x37, 0x13, 0x00, 0x00, 'D', 'y', 'n', 'a', 'L', 'a',
+     'b', ' ', ' ', ' ', ' ', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
      0x00, 0x00,
 
      // Zero up to 2 last bytes of FAT magic code
@@ -127,7 +129,7 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
         'D', 'a', 't', 'a', 'F', 'i', 'l', 'e', 'c', 's', 'v', 0x20, 0x00, 0x00,
         0x00, 0x00, 0x8E, 0x59, 0x8E, 0x59, 0x00, 0x00, 0x00, 0x00, 0x8E, 0x59,
         0x02, 0x00, 0x01, 0x00, 0x00,
-        0x00, // Datafile size is unknown, but this will be updated later when the datafile is generated
+        0x00, // Last 4-bytes is Datafile size, unknown for now but will be updated later when the datafile is generated
 
         // third entry is README.TXT (starts at cluster 62, last block)
         'R', 'E', 'A', 'D', 'M', 'E', ' ', ' ', 'T', 'X', 'T', 0x20, 0x00, 0x00,

@@ -49,29 +49,16 @@ void generateCSV() {
   uint32_t block_offset = 0;
   char line_buffer[20];  // Single line buffer
 
-  // Helper lambda function to write data across blocks
-  //   - copy one byte to disk
-  //   - If block full (512 bytes): increment current_block, reset block_offset to 0
-  auto writeToBlocks = [&](const char* data, uint32_t len) {
-    for (uint32_t i = 0; i < len; i++) {
-      msc_disk[current_block][block_offset++] = data[i];
-      if (block_offset >= DISK_BLOCK_SIZE) {
-        current_block++;
-        block_offset = 0;
-      }
-    }
-  };
-
   // Write header
-  uint32_t len = sprintf(line_buffer, "Time [us],Displacement [mm]\n");
-  writeToBlocks(line_buffer, len);
+  uint32_t len = sprintf(line_buffer, "Time [µs],Displacement [mm]\n");
+  writeToBlocks(line_buffer, len, current_block, block_offset);
 
   // Write data rows
   for (int i = 0; i < datapoint_count; i++) {
     len = sprintf(line_buffer, "%lu,%d\n",
                   timeseries[i].millisecond,
                   timeseries[i].displacement_mm);
-    writeToBlocks(line_buffer, len);
+    writeToBlocks(line_buffer, len, current_block, block_offset);
   }
 
   // Calculate file metrics
@@ -105,11 +92,24 @@ void generateCSV() {
 
   // Update file size in Block2 directory entry. Block2, starting byte 32 defines DataFile.csv
   // Bytes 60-63: 4-bytes little-endian file size.
-  msc_disk[2][60] = file_size & 0xFF;
-  msc_disk[2][61] = (file_size >> 8) & 0xFF;
-  msc_disk[2][62] = (file_size >> 16) & 0xFF;
-  msc_disk[2][63] = (file_size >> 24) & 0xFF;
+  #define ROOT_DIR_BLOCK 2
+  #define FILE_SIZE_OFFSET 60
+  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET] = file_size & 0xFF;
+  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 1] = (file_size >> 8) & 0xFF;
+  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 2] = (file_size >> 16) & 0xFF;
+  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 3] = (file_size >> 24) & 0xFF;
 }
+
+static void writeToBlocks(const char* data, uint32_t len,
+                            uint32_t& current_block, uint32_t& block_offset) {
+    for (uint32_t i = 0; i < len; i++) {
+      msc_disk[current_block][block_offset++] = data[i];
+      if (block_offset >= DISK_BLOCK_SIZE) {
+        current_block++;
+        block_offset = 0;
+      }
+    }
+  }
 
 void updateBootSectorForDiskSize() {
   // Update total sectors in boot sector (bytes 19-20)
@@ -144,7 +144,11 @@ void setup() {
   }
 
   Serial.begin(115200);
-  while (!Serial) delay(100);
+  static uint8_t serial_initialiser_counter = 0;
+  while (!Serial && serial_initialiser_counter < 5) {
+    delay(100);
+    serial_initialiser_counter++;
+  } 
 
   gpio_initialise();
 
@@ -223,9 +227,11 @@ void handleCaptureMode() {
   if (mode != last_mode) {
     Serial.println("Capturing");
     digitalWrite(ledRec, HIGH);
-    lc.setChar(0, 2, '-', false);
-    lc.setChar(0, 1, '-', false);
-    lc.setChar(0, 0, '-', false);
+
+    // display "rEC" (recording)
+    lc.setRow(0, 2, 0x05);         // r
+    lc.setChar(0, 1, 'E', false);  // E
+    lc.setRow(0, 0, 0x4E);         // c
     last_mode = mode;
 
     stateChanged = false;
@@ -319,7 +325,6 @@ void processEncoderChange() {
 // Index: [previous_state][current_state] -> direction
 // Returns: +1 forward, -1 reverse, 0 invalid/no-change
 const int8_t ENCODER_TRANSITION_TABLE[8][8] = {
-  //  0   1   2   3   4   5   6   7  <- current state
   {   0, -1,  0,  0,  1,  0,  0,  0 },  // 0 (0b000) previous
   {   1,  0,  0, -1,  0,  0,  0,  0 },  // 1 (0b001)
   {   0,  0,  0,  0,  0,  0,  0,  0 },  // 2 (0b010) invalid
