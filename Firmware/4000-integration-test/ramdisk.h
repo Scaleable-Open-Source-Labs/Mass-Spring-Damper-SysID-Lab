@@ -23,10 +23,11 @@
  * THE SOFTWARE.
  */
 
+
 #ifndef RAMDISK_H_
 #define RAMDISK_H_
 
-// 8KB is the smallest size that windows allow to mount
+// 8KB is the smallest size that Windows will allow to mount
 #define DISK_BLOCK_NUM 64  // Use to set disk size. 64*512 = 32kB.
 #define DISK_BLOCK_SIZE 512
 
@@ -46,6 +47,16 @@ Note: copy these instructions to your computer before beginning if necessary. \n
 5: Wait until REC light turns off.\n\
 6: MassSpring drive appears on host computer, contains data file."
 
+
+///------------- FAT12 Memory map -------------//
+// Block0: Boot Sector
+// Block1: FAT Table 1
+// Block2: FAT Table 2 (exact copy of FAT Table 1 - Windows requires a redundant copy)
+// Block3: Root Directory
+// Block4: Data
+//  ...
+// Block63: Data
+
 uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
   //------------- Block0: Boot Sector -------------//
   // byte_per_sector    = DISK_BLOCK_SIZE; fat12_sector_num_16  =
@@ -59,8 +70,8 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
     MSB(DISK_BLOCK_SIZE), 0x01, 0x01, 0x00, 0x02, 0x10, 0x00, LSB(DISK_BLOCK_NUM), MSB(DISK_BLOCK_NUM), 0xF8, 0x01, 0x00,
     //                                      ^^^^ CHANGED: 0x01 to 0x02 (2 FATs)
     0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0x80, 0x00, 0x29, 0x37, 0x13, 0x00, 0x00, 'D', 'y', 'n', 'a', 'L', 'a',
-    'b', ' ', ' ', ' ', ' ', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
+    0x80, 0x00, 0x29, 0x37, 0x13, 0x00, 0x00, 'D', 'Y', 'N', 'A', 'L', 'A',
+    'B', ' ', ' ', ' ', ' ', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
     0x00, 0x00,
 
     // Zero up to 2 last bytes of FAT magic code
@@ -150,12 +161,12 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 
-    // second entry is data file with valid timestamps
+    // second entry is data file
     'D', 'A', 'T', 'A', 'F', 'I', 'L', 'E', 'C', 'S', 'V', 0x20, 0x00, 0xC6,
     0x52, 0x6D, 0x65, 0x43, 0x65, 0x43, 0x00, 0x00, 0x88, 0x6D, 0x65, 0x43,
     0x02, 0x00, 0x01, 0x00, 0x00, 0x00,
 
-    // third entry is README.TXT with valid timestamps
+    // third entry is README.TXT
     'R', 'E', 'A', 'D', 'M', 'E', ' ', ' ', 'T', 'X', 'T', 0x20, 0x00, 0xC6,
     0x52, 0x6D, 0x65, 0x43, 0x65, 0x43, 0x00, 0x00, 0x88, 0x6D, 0x65, 0x43,
     0x3D, 0x00, LSB(sizeof(README_CONTENTS) - 1), MSB(sizeof(README_CONTENTS) - 1) & 0xFF, 0x00, 0x00 },
@@ -223,4 +234,4 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
   { README_CONTENTS }  // Block 63
 };
 
-#endif /* RAMDISK_H_ */
+#endif

@@ -44,66 +44,6 @@ void addDataPoint(uint32_t ms, int disp) {
 }
 
 
-/*
-// Generate CSV content from timeseries data
-void generateCSV() {
-  uint32_t current_block = 4;  // Data blocks start at block 3 (Block0: Boot sector, Block1: FAT table, Block3: Data)
-  uint32_t block_offset = 0;
-  char line_buffer[20];  // Single line buffer
-
-  // Write header
-  uint32_t len = sprintf(line_buffer, "Time [µs],Displacement [mm]\n");
-  writeToBlocks(line_buffer, len, current_block, block_offset);
-
-  // Write data rows
-  for (int i = 0; i < datapoint_count; i++) {
-    len = sprintf(line_buffer, "%lu,%d\n",
-                  timeseries[i].millisecond,
-                  timeseries[i].displacement_mm);
-    writeToBlocks(line_buffer, len, current_block, block_offset);
-  }
-
-  // Calculate file metrics
-  uint32_t file_size = (current_block - 3) * DISK_BLOCK_SIZE + block_offset;
-  uint32_t blocks_needed = current_block - 3 + (block_offset > 0 ? 1 : 0);
-
-  // Zero remainder of final block. Partial blocks must be zeroed to avoid garbage data.
-  if (block_offset > 0) {
-    memset(msc_disk[current_block] + block_offset, 0, DISK_BLOCK_SIZE - block_offset);
-  }
-
-  // Update FAT Table
-  uint8_t* fat = msc_disk[1];
-  // for all blocks, Block3 and onwards...
-  // Chain logic:
-  // if not last block: next_cluster = cluster + 1 (points to next block)
-  // if last block: next_cluster = 0xFFF (EOF marker)
-  for (uint32_t cluster = 2; cluster < 2 + blocks_needed; cluster++) {
-    uint16_t next_cluster = (cluster < 2 + blocks_needed - 1) ? (cluster + 1) : 0xFFF;
-    uint32_t byte_offset = (cluster * 3) / 2;
-
-    // FAT12 Packing (12 bits per entry). Two entries = 3 bytes.
-    if (cluster % 2 == 0) {
-      fat[byte_offset] = next_cluster & 0xFF;
-      fat[byte_offset + 1] = (fat[byte_offset + 1] & 0xF0) | ((next_cluster >> 8) & 0x0F);
-    } else {
-      fat[byte_offset] = (fat[byte_offset] & 0x0F) | ((next_cluster << 4) & 0xF0);
-      fat[byte_offset + 1] = (next_cluster >> 4) & 0xFF;
-    }
-  }
-
-  // Update file size in Block2 directory entry. Block2, starting byte 32 defines DataFile.csv
-  // Bytes 60-63: 4-bytes little-endian file size.
-  #define ROOT_DIR_BLOCK 3
-  #define FILE_SIZE_OFFSET 60
-  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET] = file_size & 0xFF;
-  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 1] = (file_size >> 8) & 0xFF;
-  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 2] = (file_size >> 16) & 0xFF;
-  msc_disk[ROOT_DIR_BLOCK][FILE_SIZE_OFFSET + 3] = (file_size >> 24) & 0xFF;
-}
-
-*/
-
 // Generate CSV content from timeseries data
 void generateCSV() {
   uint32_t current_block = 4;  // Data blocks start at block 4 (Block0: Boot, Block1: FAT1, Block2: FAT2, Block3: Root Dir)
@@ -111,7 +51,7 @@ void generateCSV() {
   char line_buffer[20];  // Single line buffer
 
   // Write header
-  uint32_t len = sprintf(line_buffer, "Time [µs],Displacement [mm]\n");
+  uint32_t len = sprintf(line_buffer, "Time [us],Displacement [mm]\n");
   writeToBlocks(line_buffer, len, current_block, block_offset);
 
   // Write data rows
@@ -410,8 +350,6 @@ int getDirection(uint8_t prevState, uint8_t currState) {
 // Copy disk's data to buffer (up to bufsize) and
 // return number of copied bytes (must be multiple of block size)
 int32_t msc_read_callback(uint32_t lba, void* buffer, uint32_t bufsize) {
-  Serial.print("READ LBA: ");
-  Serial.println(lba);
   uint8_t const* addr = msc_disk[lba];
   memcpy(buffer, addr, bufsize);
 
