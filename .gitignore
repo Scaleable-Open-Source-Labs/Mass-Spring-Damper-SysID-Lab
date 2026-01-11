@@ -1,8 +1,11 @@
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 
-# automatically generated production files
+# automatically generated Gerber production files
 *production/
+
+# Compiled binaries
+*build/
 
 # Temporary files
 *.000

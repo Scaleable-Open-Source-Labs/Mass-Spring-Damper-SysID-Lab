@@ -618,7 +618,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "CAD/DynaLab.step",
       "svg": "",
       "vrml": ""
     },
