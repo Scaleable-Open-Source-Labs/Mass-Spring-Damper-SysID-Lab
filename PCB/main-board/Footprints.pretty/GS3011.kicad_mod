@@ -1,9 +1,9 @@
-(footprint "GS3011A"
+(footprint "GS3011"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "Single Digit 7-segment display Common Cathode")
+	(descr "Single Digit 7-segment display")
 	(property "Reference" "LED**"
 		(at 0 -8.75 0)
 		(unlocked yes)
@@ -17,7 +17,7 @@
 			)
 		)
 	)
-	(property "Value" "GS3011A"
+	(property "Value" "GS3011"
 		(at 0 9 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -251,15 +251,15 @@
 		(uuid "947a8cbe-166e-4d49-b8df-8e95cc37ab96")
 	)
 	(embedded_fonts no)
-	(model "./packages3D/028_7seg.stp"
+	(model "./packages3D/GS3011.step"
 		(offset
-			(xyz -3.75 -6.75 0)
+			(xyz 0 0 0)
 		)
 		(scale
-			(xyz 0.95 1 1.2)
+			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -90 -0 -0)
+			(xyz -0 -0 -0)
 		)
 	)
 )

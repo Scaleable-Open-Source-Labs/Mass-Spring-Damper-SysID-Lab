@@ -15668,7 +15668,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Footprints:GS3011A"
+		(property "Footprint" "Footprints:GS3011"
 			(at 486.41 82.55 0)
 			(effects
 				(font
@@ -19655,7 +19655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Footprints:GS3011A"
+		(property "Footprint" "Footprints:GS3011"
 			(at 535.94 82.55 0)
 			(effects
 				(font
@@ -28075,7 +28075,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Footprints:GS3011A"
+		(property "Footprint" "Footprints:GS3011"
 			(at 510.54 82.55 0)
 			(effects
 				(font

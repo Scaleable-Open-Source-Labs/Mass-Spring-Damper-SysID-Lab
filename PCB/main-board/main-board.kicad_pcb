@@ -271,7 +271,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/1356b502-f391-4d79-a351-0c1008f1419a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -1452,7 +1452,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/c8f08c4b-9c63-4c70-802e-04550ec83144")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -1775,11 +1775,11 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Footprints:GS3011A"
+	(footprint "Footprints:GS3011"
 		(layer "F.Cu")
 		(uuid "19495347-3f81-49ae-966f-4e63a8fcffe3")
 		(at 131.7275 122.755)
-		(descr "Single Digit 7-segment display Common Cathode")
+		(descr "Single Digit 7-segment display")
 		(property "Reference" "U6"
 			(at 0 -8.75 0)
 			(unlocked yes)
@@ -1794,10 +1794,9 @@
 			)
 		)
 		(property "Value" "GS3011C"
-			(at 0 1.25 0)
+			(at 0 9 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "ef9d7be9-11cc-42c2-a890-35178abcd0fd")
 			(effects
 				(font
@@ -1806,7 +1805,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 6.941531 11.291496 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1837,7 +1836,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "bcf671c7-539d-4498-89c1-e02a7b65d632")
+			(uuid "85c2e696-d440-4d97-b606-2c187912460d")
 			(effects
 				(font
 					(size 1 1)
@@ -1850,7 +1849,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "df956626-3e34-420b-8fb9-91bc078de370")
+			(uuid "52706427-a9d6-4093-9241-216fcd838851")
 			(effects
 				(font
 					(size 1 1)
@@ -1860,7 +1859,7 @@
 		)
 		(path "/f510c4de-3848-49c7-9b97-9a2367a7ba7f")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -4 7.6)
@@ -1870,7 +1869,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "6ee0069d-2120-4a31-978c-bd936011b4ff")
+			(uuid "d62150e9-cfc2-4ae5-88b4-14c1fbdda14e")
 		)
 		(fp_line
 			(start -4 8.2)
@@ -1880,7 +1879,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "a7147f11-df0c-4c63-9d5b-78b4f0e69af2")
+			(uuid "d2bf958c-b5ad-4306-bb80-21633dced3f1")
 		)
 		(fp_line
 			(start -1.8 2.6)
@@ -1890,7 +1889,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "f5fc8522-7d84-41ae-afa2-b3d7536141d8")
+			(uuid "67b414b2-d4e5-4f1f-9125-c76d8a3b7226")
 		)
 		(fp_line
 			(start -1.6 -0.6)
@@ -1900,7 +1899,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "960d569a-17fd-421c-a391-11dfc817a311")
+			(uuid "fd258110-9d23-4e37-9ba0-101f4acc96a5")
 		)
 		(fp_line
 			(start -1.2 0)
@@ -1910,7 +1909,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "84c91d56-e07e-4427-88a0-6126de1c5d39")
+			(uuid "8b1302fd-439e-4b07-9153-e3caee77ec78")
 		)
 		(fp_line
 			(start -0.9 -3.2)
@@ -1920,7 +1919,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "f820e7bc-e6c3-43a2-b318-323bccca1625")
+			(uuid "b9cd2b04-daaa-4963-9507-cb823e6a2ba1")
 		)
 		(fp_line
 			(start 0.7 3.2)
@@ -1930,7 +1929,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "abe5cfe1-c944-4e8b-80b5-afb319c91501")
+			(uuid "01986aab-8c4d-4f56-a8dd-853dbbab1739")
 		)
 		(fp_line
 			(start 1.2 2.8)
@@ -1940,7 +1939,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "059e60c7-3e0b-4b68-98f8-1395a87d6df6")
+			(uuid "f1ab1d41-196f-4218-a243-507fed245fd1")
 		)
 		(fp_line
 			(start 1.4 -0.4)
@@ -1950,7 +1949,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "a5b92367-f706-42bc-a9a6-4577d56b2e16")
+			(uuid "511e8f98-bdd0-480f-8ae1-6fbea8715e66")
 		)
 		(fp_circle
 			(center 2 3.2)
@@ -1961,7 +1960,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "2225fa12-8d92-4d8f-94da-e8b740c6ecb6")
+			(uuid "bbff5170-e99c-4bbb-b7bf-d0c09b009a8d")
 		)
 		(fp_rect
 			(start -3.9 -8)
@@ -1972,10 +1971,10 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "012d3834-e109-4ec1-b004-1a05ad69cfef")
+			(uuid "e47ea925-4df9-4e23-9c81-f1975079c696")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.5 0)
+			(at 0 -9 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "f524bfba-4636-4f5b-b07d-6df0a917284b")
@@ -2087,15 +2086,15 @@
 			(uuid "1a697aec-87cf-4211-bfe3-b1683a681d7b")
 		)
 		(embedded_fonts no)
-		(model "./packages3D/028_7seg.stp"
+		(model "./packages3D/GS3011.step"
 			(offset
-				(xyz -3.75 -6.75 0)
+				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 0.95 1 1.2)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 -0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -2184,7 +2183,7 @@
 		(property ki_fp_filters "Everlight*ITR1201SR10AR*")
 		(path "/63c3be41-0683-48f6-89b7-dd682e7d4f7a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1.79 -3.09)
@@ -2863,7 +2862,7 @@
 		(property ki_fp_filters "Everlight*ITR1201SR10AR*")
 		(path "/cc128077-efa7-4f7d-aad5-d8219908e430")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1.79 -3.09)
@@ -3589,7 +3588,7 @@
 		)
 		(path "/455ce367-911f-4f35-b1f1-496f3ab99099")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 0.14 -3.61)
@@ -3786,11 +3785,11 @@
 			)
 		)
 	)
-	(footprint "Footprints:GS3011A"
+	(footprint "Footprints:GS3011"
 		(layer "F.Cu")
 		(uuid "592fbcc5-5e7c-42de-8517-c26ccfa7a7af")
 		(at 123.5225 122.755)
-		(descr "Single Digit 7-segment display Common Cathode")
+		(descr "Single Digit 7-segment display")
 		(property "Reference" "U5"
 			(at 0 -8.75 0)
 			(unlocked yes)
@@ -3805,10 +3804,9 @@
 			)
 		)
 		(property "Value" "GS3011C"
-			(at 0 1.25 0)
+			(at 0 9 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "e89974c6-7c96-4a29-bb8d-a92b558714b9")
 			(effects
 				(font
@@ -3817,7 +3815,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 6.941531 11.291496 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3848,7 +3846,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1f6fdc01-1817-46d0-8cbe-e46489d0d11d")
+			(uuid "1fe58094-a309-4b84-8eee-e9c495e01dee")
 			(effects
 				(font
 					(size 1 1)
@@ -3861,7 +3859,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8fdc662a-1984-4c94-a429-2f6a19a19603")
+			(uuid "e3d91efe-1ad0-4e9a-8960-428d77f3bc45")
 			(effects
 				(font
 					(size 1 1)
@@ -3871,7 +3869,7 @@
 		)
 		(path "/0d15fabc-8f8f-4924-88fa-71cc92be43fa")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -4 7.6)
@@ -3881,7 +3879,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "792b6fbe-1655-4bc3-ab6f-2e0b73761ef8")
+			(uuid "43d111c4-f2e4-4046-9de0-36267ff98b0d")
 		)
 		(fp_line
 			(start -4 8.2)
@@ -3891,7 +3889,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "90a241d5-6780-4506-aeeb-8965937787dd")
+			(uuid "fc2fe45c-d134-4d45-a50f-ab9cbc1f6b12")
 		)
 		(fp_line
 			(start -1.8 2.6)
@@ -3901,7 +3899,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "3138e2e1-a869-434e-b354-039e73660f8d")
+			(uuid "dec6a86f-95b6-4495-964c-3be171c2613a")
 		)
 		(fp_line
 			(start -1.6 -0.6)
@@ -3911,7 +3909,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "13927709-5dee-4075-bac9-59b62cceb639")
+			(uuid "65b72a00-1341-42ea-bba1-1b73286b2f55")
 		)
 		(fp_line
 			(start -1.2 0)
@@ -3921,7 +3919,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "5be2563c-8f47-48f9-9c9a-2e6796bd6fb7")
+			(uuid "da7c858e-df35-4a9b-95b1-de723809fca4")
 		)
 		(fp_line
 			(start -0.9 -3.2)
@@ -3931,7 +3929,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "2f303b19-f4f1-4dce-b7dc-fd88457fac8a")
+			(uuid "449cf18e-55e9-4ea4-aa74-1f812bb88fdb")
 		)
 		(fp_line
 			(start 0.7 3.2)
@@ -3941,7 +3939,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e30212ad-4083-40f0-a72b-745b823c8228")
+			(uuid "f3014291-3fce-407f-970d-9013fb61d715")
 		)
 		(fp_line
 			(start 1.2 2.8)
@@ -3951,7 +3949,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ad19725f-3925-4447-8217-e1cec71dd9c7")
+			(uuid "29e23ec0-6ea5-44b8-afd2-d2b81655eb40")
 		)
 		(fp_line
 			(start 1.4 -0.4)
@@ -3961,7 +3959,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "29aef022-98e1-44fa-8ed0-0ab9e80ea6a7")
+			(uuid "812835de-fa2e-462f-8834-465e264105a2")
 		)
 		(fp_circle
 			(center 2 3.2)
@@ -3972,7 +3970,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "5f58f2af-a6a5-4953-96df-be611c3ab9ba")
+			(uuid "8a85d2ca-4818-4617-9cd5-a0ccd6f1ddb3")
 		)
 		(fp_rect
 			(start -3.9 -8)
@@ -3983,10 +3981,10 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "ed4e3410-1f35-431d-be3c-d9e2a17f12bf")
+			(uuid "9faa04a6-6fb5-4ea9-9e4d-b8b6d38b4ad8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.5 0)
+			(at 0 -9 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "ab4ee6ac-a971-451f-9036-75e36109681c")
@@ -4098,15 +4096,15 @@
 			(uuid "72fcd14b-06bf-4930-8afb-932998b2254b")
 		)
 		(embedded_fonts no)
-		(model "./packages3D/028_7seg.stp"
+		(model "./packages3D/GS3011.step"
 			(offset
-				(xyz -3.75 -6.75 0)
+				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 0.95 1 1.2)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 -0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -4193,7 +4191,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f9c2e334-9971-4edc-b2c5-e5f1547ad41b")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.485 -0.735)
@@ -4542,11 +4540,11 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Footprints:GS3011A"
+	(footprint "Footprints:GS3011"
 		(layer "F.Cu")
 		(uuid "6b579ca4-fc32-4fd9-b109-b6600695fd7d")
 		(at 139.9775 122.755)
-		(descr "Single Digit 7-segment display Common Cathode")
+		(descr "Single Digit 7-segment display")
 		(property "Reference" "U7"
 			(at 0 -8.75 0)
 			(unlocked yes)
@@ -4561,10 +4559,9 @@
 			)
 		)
 		(property "Value" "GS3011C"
-			(at 0 1.25 0)
+			(at 0 9 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "6900ea49-86a1-46fa-a483-c25e39f68213")
 			(effects
 				(font
@@ -4573,7 +4570,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Wuxi-ARK-Tech-Elec-SM420561N_C141367.pdf"
+		(property "Datasheet" "../Datasheet/GS3011C.pdf"
 			(at 6.941531 11.291496 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4604,7 +4601,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a81bff16-2728-43b6-9775-77b71acdea65")
+			(uuid "0d428fba-8671-4727-8a19-9ef9cb16b4f5")
 			(effects
 				(font
 					(size 1 1)
@@ -4617,7 +4614,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1dfdca41-7ef1-41a0-90ec-dca62340f94f")
+			(uuid "08fd5aa8-905a-4fb6-ad1f-14443cf5a312")
 			(effects
 				(font
 					(size 1 1)
@@ -4627,7 +4624,7 @@
 		)
 		(path "/4f6aa6ca-6059-45d0-9f1d-69a08f0be10c")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -4 7.6)
@@ -4637,7 +4634,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "32ac2150-e45e-4f96-81eb-1c5def5064b7")
+			(uuid "ec5b6eb0-f6a6-450b-b4ba-829ee3450773")
 		)
 		(fp_line
 			(start -4 8.2)
@@ -4647,7 +4644,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "a796a2ea-b93f-4fac-bfb1-8cbe179a9de3")
+			(uuid "c1736af0-730a-4956-8e5a-effc691626be")
 		)
 		(fp_line
 			(start -1.8 2.6)
@@ -4657,7 +4654,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d6285b8e-a3ee-4a5c-8923-a687579b6283")
+			(uuid "1d22408e-d6bd-4799-82b7-a87faf85e1ef")
 		)
 		(fp_line
 			(start -1.6 -0.6)
@@ -4667,7 +4664,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "6d770371-64b0-41e4-879a-cef35cd5bb80")
+			(uuid "3d44cc0d-58e5-4eca-9d7a-8b25049d6c96")
 		)
 		(fp_line
 			(start -1.2 0)
@@ -4677,7 +4674,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "7e0ed07d-6e9e-4a46-8122-6982003f9cdc")
+			(uuid "7d4e48fa-b6b2-4016-b11b-8c5ab3f43bf2")
 		)
 		(fp_line
 			(start -0.9 -3.2)
@@ -4687,7 +4684,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "6ec68dde-2ce0-4362-965a-b6d785dbda9e")
+			(uuid "e3d4e70b-0463-48d4-8e64-2a9e6364a7f3")
 		)
 		(fp_line
 			(start 0.7 3.2)
@@ -4697,7 +4694,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "cadc264f-312a-4ddf-ba1a-0c5752eda1c2")
+			(uuid "fb376712-c10c-43a2-a0d5-ffae4e4f6b3b")
 		)
 		(fp_line
 			(start 1.2 2.8)
@@ -4707,7 +4704,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "12ccf67c-bc4b-4801-915d-2405a60d9502")
+			(uuid "91e9815e-f8d0-4973-912a-4c54a44b0a34")
 		)
 		(fp_line
 			(start 1.4 -0.4)
@@ -4717,7 +4714,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "556a8110-e619-4b36-a6ce-1480ce8d5913")
+			(uuid "94b76095-e441-4063-a524-1a11c1d0bdd2")
 		)
 		(fp_circle
 			(center 2 3.2)
@@ -4728,7 +4725,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "cfeecf87-7cf7-439e-aace-70bb6cdf3da8")
+			(uuid "80038ef3-0e6c-41f1-b998-1d93f7c94e68")
 		)
 		(fp_rect
 			(start -3.9 -8)
@@ -4739,10 +4736,10 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "f6ffd041-532e-49c7-865e-31302d8bedd5")
+			(uuid "c05912c9-6cf4-47d9-be78-ffbad62af9d6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.5 0)
+			(at 0 -9 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "0ee2e120-f0e1-48c6-917f-e5e5559de01e")
@@ -4854,15 +4851,15 @@
 			(uuid "542cba48-a637-41f0-9a5c-ff062140daa2")
 		)
 		(embedded_fonts no)
-		(model "./packages3D/028_7seg.stp"
+		(model "./packages3D/GS3011.step"
 			(offset
-				(xyz -3.75 -6.75 0)
+				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 0.95 1 1.2)
+				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 -0 -0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -4950,7 +4947,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/5629c8c1-667d-49e1-8dc9-1d4c1eb5562c")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -5388,7 +5385,7 @@
 		(property ki_fp_filters "Everlight*ITR1201SR10AR*")
 		(path "/fb2bdd6f-89de-44d6-a793-4fa0b3fab72c")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1.79 -3.09)
@@ -6092,7 +6089,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/ac3f1d19-40f7-4bde-a82f-147b8e1d7224")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -7421,7 +7418,7 @@
 		)
 		(path "/15829afd-d4cf-4442-bb71-dc9d048adaa1")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 0.14 -3.61)
@@ -7983,7 +7980,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*")
 		(path "/ce615aa6-30b0-42e8-84d0-875334b21032")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.06 -2.56)
@@ -8381,7 +8378,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/3aa3eb40-fb82-483a-9a12-e62b7ac43f9f")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.91 1.56)
@@ -8761,7 +8758,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/e51fa3e4-7e64-48ea-93be-17dda7a5e511")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -8937,7 +8934,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*")
 		(path "/32750e73-97ac-4378-b1dc-33853e70c1cc")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.06 -2.56)
@@ -9335,7 +9332,7 @@
 		(property ki_fp_filters "*polyfuse* *PTC*")
 		(path "/aafbf1c7-65aa-40ec-99fb-6d95f0b65ab9")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.727064 -0.91)
@@ -9511,7 +9508,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/2b5e902c-5d1e-460f-99d4-af7e97b832b0")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -9955,7 +9952,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/31dedea1-0498-4b95-bfe3-368bde72a201")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -10131,7 +10128,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/7c4ef76b-c5a9-4845-adc2-92113ab27373")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -10307,7 +10304,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/4636e27e-2bb8-4283-9336-e85ef9a323b5")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -10484,7 +10481,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/467395fc-6e67-484a-b636-38c7d1037ebf")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -10763,7 +10760,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/c601c8e0-1df8-4338-bd0a-6b945897562a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -10940,7 +10937,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/e0ed06bc-9ba5-49a2-a2a0-c8d913eec0e0")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center 0 2.7)
@@ -11219,7 +11216,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/398b50e6-4a72-4da6-a46c-b0f0c502e6bf")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -11395,7 +11392,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/46b10c03-e387-49e6-a09f-46795128c5dc")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -11574,7 +11571,7 @@
 		(property ki_fp_filters "USB*C*Receptacle*")
 		(path "/09b5bd03-5f9c-4e27-a5bf-b86880316060")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 4.7 1.78)
@@ -12083,7 +12080,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/85f0383e-9fda-430e-84ed-2af3b0f5b870")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -12259,7 +12256,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d0c6e8a1-8534-444e-b2e2-7a9b0927cd70")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -12435,7 +12432,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d9f01435-f8c8-4ae7-99b7-21302cd91079")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -13179,7 +13176,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/e0620d79-718a-4252-9742-10614381628c")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -13355,7 +13352,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/00efdc1c-d2a9-462d-86fd-a574d9481449")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -13529,9 +13526,9 @@
 			)
 		)
 		(property ki_fp_filters "DIP*W7.62mm* SO14* SSOP?14* TSSOP?14* SOIC*3.9x8.7mm*P1.27mm*")
-		(path "/58d3daa9-f68d-4851-b811-03c37aa9b3a8")
+		(path "/856530b5-e209-406d-b755-53b786d1804b")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 2.06 -4.435)
@@ -13979,7 +13976,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/1edfaae6-cc71-49a8-a394-774d8654ebfe")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -14155,7 +14152,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/ee9d896c-c8e4-4152-805a-c494e115cb54")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -14331,7 +14328,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d49a53cc-10b1-44e2-bc08-d4a15516c1a0")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -14508,7 +14505,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/03e321e8-f886-4901-b9a6-82fff21f89b6")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center 0 2.7)
@@ -14787,7 +14784,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/008a3d8f-c75a-46fc-be5a-14ecb648ffc3")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -14963,7 +14960,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/0fc95bae-9175-4c17-9206-fcad0820968d")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -15139,7 +15136,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a5adb360-49f1-43cb-8694-1d4b1ce499c2")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -15315,7 +15312,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/af5b62cb-6695-4ec7-b71a-67c614129cca")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -15490,7 +15487,7 @@
 		)
 		(path "/2003db89-fef3-4509-a25d-b1592eb1755c")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.1 -3.1)
@@ -15759,7 +15756,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/adebfa5a-ba4a-4192-a5d8-8f620a8ff1c3")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -15935,7 +15932,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/55b08b32-739e-4f2b-a26c-97ea298da036")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -16111,7 +16108,7 @@
 		(property ki_fp_filters "SOIC*7.5x15.4mm*P1.27mm* DIP*7.62mm*")
 		(path "/56126181-e9c6-4e63-929d-7c3b9e205f5a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.86 -7.81)
@@ -16671,7 +16668,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/1a46c1a7-a39a-49b6-a555-169af83a1268")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -16847,7 +16844,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/31ea5730-3772-4a4d-8d03-0f8e8fc6a814")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -17023,7 +17020,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a075a71b-eca8-4488-959f-fe9010eff321")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -17199,7 +17196,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/9f82dbad-83eb-4494-9c18-10da9f7b03ad")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -17375,7 +17372,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/55473878-f1a4-4f62-bc8f-0dab28f619ab")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -17551,7 +17548,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/86c6f18c-c5ff-4c16-acdb-c30c38c35bf3")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -17715,8 +17712,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/6f07a0e9-241e-47d9-9f75-f6bc002e3b8e")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -17851,7 +17848,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/8126d496-b83d-44d7-b0c8-d4eff70f18c5")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -18028,7 +18025,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/7d1fc1d8-0a19-4ee1-bc1a-97e718109c55")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -18307,7 +18304,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
 		(path "/fe149179-f6a6-4c4a-86c9-4ef8db3f0dfb")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.06 -2.56)
@@ -18705,7 +18702,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/33d18a58-2911-4044-8b50-784ddde42e73")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -18882,7 +18879,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/91c851e3-02c5-4b57-8727-4a53a241011d")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center 0 2.7)
@@ -19162,7 +19159,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/a05b171e-a934-45b8-8cdf-82e3972c73fc")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -19443,7 +19440,7 @@
 		(property ki_fp_filters "SOT?223*TabPin2*")
 		(path "/e3b151d4-b1b9-4b94-b7b3-490c52537a65")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.85 -3.41)
@@ -19741,7 +19738,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/c1c905c7-eb7b-405f-9842-3be090da3853")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -19917,7 +19914,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0522ebcd-1e58-4eeb-9857-6409e33edc7a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -20093,7 +20090,7 @@
 		(property ki_fp_filters "*SOIC*5.3x5.3mm*P1.27mm*")
 		(path "/9953a326-257c-4543-ab85-36a699de3367")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 2.76 2.76)
@@ -20493,7 +20490,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/117d7935-5057-499b-8a68-2f7eb2ca79f2")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -20669,7 +20666,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/33b38704-3a0c-4fe8-997b-71f6dbee539e")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -20845,7 +20842,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d0e3a936-f4bb-4ded-afe1-56332b421668")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -21009,8 +21006,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/a7dcbf13-8693-4806-b9b4-afb9deba6663")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -21145,7 +21142,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0c1886d6-bad8-455b-a504-6e7b0b18cfee")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -21321,7 +21318,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
 		(path "/b7eaf038-b24e-4409-a5bb-dc14dd46c181")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.06 -2.56)
@@ -21707,8 +21704,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/8b036cf5-4bdb-4f32-bf73-6449ddd66453")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -21831,8 +21828,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/7d6ded48-3e5f-4d42-86a1-cdff96a1fba8")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -21967,7 +21964,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0bc75f6d-d7a6-431d-9806-a17521e3804a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -22143,7 +22140,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/bb727df0-d788-413e-b67b-bf0a65165608")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -22374,7 +22371,7 @@
 		)
 		(path "/edd71ff6-016f-4b73-ba43-7d934b351fd8")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.96 3.61)
@@ -24226,7 +24223,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/b91db372-8c20-4a7c-a2b6-ff86e9f3f4e1")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -24402,7 +24399,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/046ce8c1-1f72-496e-8761-06637411222f")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -24578,7 +24575,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/3e6639f9-2003-4269-b511-b40d78d58082")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -24754,7 +24751,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/64b1281e-afbb-4af5-8889-cd6d46356147")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -24930,7 +24927,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/439fccdb-f506-4add-8e7c-a1af77977600")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -25107,7 +25104,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/84b1f7e7-d255-4937-9b3e-36e2d491540a")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center 0 2.7)
@@ -25386,7 +25383,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/65efacfd-436d-4ccf-b6c2-8a489ae02ccf")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -25757,7 +25754,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/72ef573b-e7c4-4183-bd44-da676935b675")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -26222,7 +26219,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b82e6006-bc65-4968-8008-1acfbddda667")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -26398,7 +26395,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/8a10033a-23a7-4c9e-b89f-04e0d8c396ed")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -26574,7 +26571,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/4e6ba5f5-ed21-4283-bb9c-117fcfa4f9b9")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -26971,7 +26968,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9b54afea-ab8b-4896-b2a4-335664578361")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -27148,7 +27145,7 @@
 		(property ki_fp_filters "MountingHole*")
 		(path "/93051c4f-4c51-479d-8584-41728ca13cb9")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_circle
 			(center -2.7 0)
@@ -27415,8 +27412,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/187fb0af-cd95-45e7-a3c1-1ab99529a3b8")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -27564,7 +27561,7 @@
 		(property ki_fp_filters "Crystal*")
 		(path "/18ba339e-c4fc-4a94-b837-af9d8562d859")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.06 1.71)
@@ -27751,8 +27748,8 @@
 		(property ki_fp_filters "Pin* Test*")
 		(path "/cad8087b-7432-473c-8854-4431703c4ebf")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(sheetfile "main-board.kicad_sch")
+		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 0 -0.95)
@@ -27887,7 +27884,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9aeb3bbe-65e5-406b-853c-dd79d46e7777")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -28063,7 +28060,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/533b2e08-93a5-4cff-803b-7296206880e2")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -28239,7 +28236,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/8cb49657-08bf-462d-888c-b220fd130cba")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -28415,7 +28412,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/f13e063b-17ab-46ab-a4ba-490a64705a61")
 		(sheetname "/")
-		(sheetfile "DynaLab.kicad_sch")
+		(sheetfile "main-board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.14058 0.51)
@@ -28658,8 +28655,8 @@
 		(uuid "f47f51dc-29d8-41c9-982a-a94da6b75cae")
 	)
 	(gr_rect
-		(start 367.25 262)
-		(end 417.25 287)
+		(start 159.85 109)
+		(end 209.85 134)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29383,8 +29380,8 @@
 		(uuid "fbe33534-daca-4da8-8801-937654364b5b")
 	)
 	(gr_line
-		(start 271.75 249)
-		(end 271.75 225)
+		(start 64.35 96)
+		(end 64.35 72)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29393,8 +29390,8 @@
 		(uuid "0488888d-1f32-4404-9a81-b19e0c538624")
 	)
 	(gr_line
-		(start 280.75 234.5)
-		(end 280.75 239)
+		(start 73.35 81.5)
+		(end 73.35 86)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29403,8 +29400,8 @@
 		(uuid "07121b59-c803-4b4d-aceb-8d7e3d2d375d")
 	)
 	(gr_line
-		(start 399.75 239)
-		(end 400.25 238.5)
+		(start 192.35 86)
+		(end 192.85 85.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29413,8 +29410,8 @@
 		(uuid "07b6ab9b-855a-4c5f-9048-4174ffe209a3")
 	)
 	(gr_line
-		(start 394.75 240)
-		(end 395.75 241)
+		(start 187.35 87)
+		(end 188.35 88)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29423,8 +29420,8 @@
 		(uuid "08a92fe7-2041-43d4-8d11-ffe5d1632dee")
 	)
 	(gr_line
-		(start 401.75 237)
-		(end 401.75 239.5)
+		(start 194.35 84)
+		(end 194.35 86.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29433,8 +29430,8 @@
 		(uuid "1769e657-8e60-44da-9d2c-d8347ee8a9f6")
 	)
 	(gr_line
-		(start 399.75 236.5)
-		(end 401.25 236.5)
+		(start 192.35 83.5)
+		(end 193.85 83.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29443,8 +29440,8 @@
 		(uuid "1f64dd4a-f2a0-4730-9d29-b2fc19bdce0a")
 	)
 	(gr_line
-		(start 401.25 240)
-		(end 399.25 240)
+		(start 193.85 87)
+		(end 191.85 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29453,9 +29450,9 @@
 		(uuid "219f9ff7-1e8a-46d4-9037-1500822e0b57")
 	)
 	(gr_arc
-		(start 406.75 249)
-		(mid 406.457107 249.707107)
-		(end 405.75 250)
+		(start 199.35 96)
+		(mid 199.057107 96.707107)
+		(end 198.35 97)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29464,9 +29461,9 @@
 		(uuid "2220ee04-2e2a-4034-b8fa-5c3f8222cf7a")
 	)
 	(gr_arc
-		(start 401.75 239.5)
-		(mid 401.603553 239.853553)
-		(end 401.25 240)
+		(start 194.35 86.5)
+		(mid 194.203553 86.853553)
+		(end 193.85 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29475,8 +29472,8 @@
 		(uuid "2b45aa3b-72d1-45e2-98fa-140053a27c1f")
 	)
 	(gr_line
-		(start 250.75 237)
-		(end 252 238.25)
+		(start 43.35 84)
+		(end 44.6 85.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29485,8 +29482,8 @@
 		(uuid "2e59d15a-8afd-4877-b680-7be1df448793")
 	)
 	(gr_line
-		(start 397.75 234.5)
-		(end 397.75 239)
+		(start 190.35 81.5)
+		(end 190.35 86)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29495,8 +29492,8 @@
 		(uuid "2fa178cf-bc02-411a-800f-66b5510c2bee")
 	)
 	(gr_line
-		(start 282.75 241)
-		(end 280.25 241)
+		(start 75.35 88)
+		(end 72.85 88)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29505,8 +29502,8 @@
 		(uuid "33f790f1-29f3-464a-a1f0-a6080c9f3746")
 	)
 	(gr_line
-		(start 398.25 241)
-		(end 399.25 240)
+		(start 190.85 88)
+		(end 191.85 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29515,8 +29512,8 @@
 		(uuid "34139a70-1e65-4dfe-ac39-dcd560e41ec1")
 	)
 	(gr_line
-		(start 278.75 236.5)
-		(end 277.25 236.5)
+		(start 71.35 83.5)
+		(end 69.85 83.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29525,8 +29522,8 @@
 		(uuid "43684bc5-7f91-4ae7-9bb0-50a66c71adca")
 	)
 	(gr_line
-		(start 395.75 241)
-		(end 398.25 241)
+		(start 188.35 88)
+		(end 190.85 88)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29535,9 +29532,9 @@
 		(uuid "437a36b4-eb5f-40d5-b97d-58c1ff06588f")
 	)
 	(gr_arc
-		(start 405.75 224)
-		(mid 406.457107 224.292893)
-		(end 406.75 225)
+		(start 198.35 71)
+		(mid 199.057107 71.292893)
+		(end 199.35 72)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29546,9 +29543,9 @@
 		(uuid "45416efb-1ece-4450-be84-96dc9325dc76")
 	)
 	(gr_arc
-		(start 272.75 250)
-		(mid 272.042893 249.707107)
-		(end 271.75 249)
+		(start 65.35 97)
+		(mid 64.642893 96.707107)
+		(end 64.35 96)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29557,8 +29554,8 @@
 		(uuid "4594600c-1125-4386-80b1-7f5ecd8c13d6")
 	)
 	(gr_line
-		(start 271.75 237)
-		(end 250.75 237)
+		(start 64.35 84)
+		(end 43.35 84)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29567,8 +29564,8 @@
 		(uuid "45c23bcc-1030-4c62-992d-5a5651ebf6a2")
 	)
 	(gr_circle
-		(center 339.25 244)
-		(end 340.75 244)
+		(center 131.85 91)
+		(end 133.35 91)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -29578,9 +29575,9 @@
 		(uuid "49190148-80c1-4398-bdbb-6fcbaedd98c4")
 	)
 	(gr_arc
-		(start 271.75 225)
-		(mid 272.042893 224.292893)
-		(end 272.75 224)
+		(start 64.35 72)
+		(mid 64.642893 71.292893)
+		(end 65.35 71)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29589,8 +29586,8 @@
 		(uuid "4a38879d-3933-49f8-a538-2b62d32b4073")
 	)
 	(gr_line
-		(start 283.75 240)
-		(end 394.75 240)
+		(start 76.35 87)
+		(end 187.35 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29599,8 +29596,8 @@
 		(uuid "4d5d46ba-c36e-4d48-8d6f-3af7b542d178")
 	)
 	(gr_line
-		(start 280.25 241)
-		(end 279.25 240)
+		(start 72.85 88)
+		(end 71.85 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29609,8 +29606,8 @@
 		(uuid "513763b6-9683-4b41-9390-0278b0dde9a6")
 	)
 	(gr_circle
-		(center 339.25 244)
-		(end 342.5 244)
+		(center 131.85 91)
+		(end 135.1 91)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29620,9 +29617,9 @@
 		(uuid "5459975d-9009-4850-9dfe-fd75a09ce40b")
 	)
 	(gr_arc
-		(start 399.25 237.5)
-		(mid 399.957107 237.792893)
-		(end 400.25 238.5)
+		(start 191.85 84.5)
+		(mid 192.557107 84.792893)
+		(end 192.85 85.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29631,9 +29628,9 @@
 		(uuid "556ddea4-a171-4144-9543-e0de4c52a13e")
 	)
 	(gr_arc
-		(start 276.75 237)
-		(mid 276.896447 236.646447)
-		(end 277.25 236.5)
+		(start 69.35 84)
+		(mid 69.496447 83.646447)
+		(end 69.85 83.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29642,9 +29639,9 @@
 		(uuid "57e433ce-bddb-41f8-b388-25cf6b6fcf89")
 	)
 	(gr_arc
-		(start 399.25 237)
-		(mid 399.396447 236.646447)
-		(end 399.75 236.5)
+		(start 191.85 84)
+		(mid 191.996447 83.646447)
+		(end 192.35 83.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29653,8 +29650,8 @@
 		(uuid "58e15e87-b7f5-4ba1-ad58-c5164b573ba8")
 	)
 	(gr_line
-		(start 278.25 239)
-		(end 278.25 238.5)
+		(start 70.85 86)
+		(end 70.85 85.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29663,8 +29660,8 @@
 		(uuid "7604a7dc-7e9c-4c98-85e7-2cffaca9ad5d")
 	)
 	(gr_line
-		(start 397.25 234)
-		(end 281.25 234)
+		(start 189.85 81)
+		(end 73.85 81)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29673,8 +29670,8 @@
 		(uuid "7bfbf80f-0c36-4aa7-8bc7-893459585254")
 	)
 	(gr_line
-		(start 280.75 239)
-		(end 278.25 239)
+		(start 73.35 86)
+		(end 70.85 86)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29683,8 +29680,8 @@
 		(uuid "7d1e6aaf-c3f5-403d-8cd3-0524f3d21c3c")
 	)
 	(gr_line
-		(start 397.75 239)
-		(end 399.75 239)
+		(start 190.35 86)
+		(end 192.35 86)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29693,9 +29690,9 @@
 		(uuid "7d1f75c6-0a47-4c0c-a4d4-c4995bf8023a")
 	)
 	(gr_arc
-		(start 278.75 236.5)
-		(mid 279.103553 236.646447)
-		(end 279.25 237)
+		(start 71.35 83.5)
+		(mid 71.703553 83.646447)
+		(end 71.85 84)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29704,8 +29701,8 @@
 		(uuid "812db7c8-af0a-4cd3-bdc3-ba913ea115e1")
 	)
 	(gr_line
-		(start 272.75 224)
-		(end 405.75 224)
+		(start 65.35 71)
+		(end 198.35 71)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29714,8 +29711,8 @@
 		(uuid "8610cfcf-e6fd-463b-95c1-47fd92979b7c")
 	)
 	(gr_line
-		(start 276.75 237)
-		(end 276.75 239.5)
+		(start 69.35 84)
+		(end 69.35 86.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29724,9 +29721,9 @@
 		(uuid "8b44e473-8d2d-42ab-94c2-2bb3babeabe7")
 	)
 	(gr_arc
-		(start 278.25 238.5)
-		(mid 278.542893 237.792893)
-		(end 279.25 237.5)
+		(start 70.85 85.5)
+		(mid 71.142893 84.792893)
+		(end 71.85 84.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29735,8 +29732,8 @@
 		(uuid "9aac7c8c-0ec1-4c82-9653-1943f943ec80")
 	)
 	(gr_line
-		(start 272.75 250)
-		(end 342.164213 250)
+		(start 65.35 97)
+		(end 134.764213 97)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29745,8 +29742,8 @@
 		(uuid "9c72ffb7-7490-452d-9376-9ea693b310cb")
 	)
 	(gr_line
-		(start 283.75 240)
-		(end 282.75 241)
+		(start 76.35 87)
+		(end 75.35 88)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29755,9 +29752,9 @@
 		(uuid "9ceaec58-cf7b-45e1-a253-c1524ddde1f9")
 	)
 	(gr_arc
-		(start 397.25 234)
-		(mid 397.603553 234.146447)
-		(end 397.75 234.5)
+		(start 189.85 81)
+		(mid 190.203553 81.146447)
+		(end 190.35 81.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29766,8 +29763,8 @@
 		(uuid "a22ef813-7e82-4f4d-b97c-363d274a874e")
 	)
 	(gr_line
-		(start 406.75 237)
-		(end 408 235.75)
+		(start 199.35 84)
+		(end 200.6 82.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29776,8 +29773,8 @@
 		(uuid "a81e41ad-e309-4f58-996d-2258074c50a1")
 	)
 	(gr_line
-		(start 279.25 237.5)
-		(end 279.25 237)
+		(start 71.85 84.5)
+		(end 71.85 84)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29786,8 +29783,8 @@
 		(uuid "aefd6b94-042b-426f-b935-27399ba06d87")
 	)
 	(gr_line
-		(start 427.75 237)
-		(end 426.5 238.25)
+		(start 220.35 84)
+		(end 219.1 85.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29796,8 +29793,8 @@
 		(uuid "b05d7c5e-6a04-4ab1-8f6e-69b4b5f62c01")
 	)
 	(gr_line
-		(start 277.25 240)
-		(end 279.25 240)
+		(start 69.85 87)
+		(end 71.85 87)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29806,8 +29803,8 @@
 		(uuid "b684f734-c859-4638-be38-b32816562abc")
 	)
 	(gr_line
-		(start 427.75 237)
-		(end 426.5 235.75)
+		(start 220.35 84)
+		(end 219.1 82.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29816,8 +29813,8 @@
 		(uuid "bbc7b849-f6cb-47e1-8dff-b25345293d2c")
 	)
 	(gr_line
-		(start 271.75 237)
-		(end 270.5 238.25)
+		(start 64.35 84)
+		(end 63.1 85.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29826,9 +29823,9 @@
 		(uuid "be0113fe-f777-4f2c-96b6-ef0cd8ef78eb")
 	)
 	(gr_arc
-		(start 401.25 236.5)
-		(mid 401.603553 236.646447)
-		(end 401.75 237)
+		(start 193.85 83.5)
+		(mid 194.203553 83.646447)
+		(end 194.35 84)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29837,8 +29834,8 @@
 		(uuid "c1caa51c-4c93-4b29-839d-e6147921fc8d")
 	)
 	(gr_line
-		(start 406.75 225)
-		(end 406.75 249)
+		(start 199.35 72)
+		(end 199.35 96)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29847,8 +29844,8 @@
 		(uuid "c93cfd82-28cd-4312-84ad-0e7e9c3b8ccd")
 	)
 	(gr_line
-		(start 406.75 237)
-		(end 408 238.25)
+		(start 199.35 84)
+		(end 200.6 85.25)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29857,9 +29854,9 @@
 		(uuid "c9ff8a4c-b701-4b35-a803-2eab648f52a8")
 	)
 	(gr_arc
-		(start 277.25 240)
-		(mid 276.896447 239.853553)
-		(end 276.75 239.5)
+		(start 69.85 87)
+		(mid 69.496447 86.853553)
+		(end 69.35 86.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29868,9 +29865,9 @@
 		(uuid "cc12d56a-8908-4588-81bb-3da162229e40")
 	)
 	(gr_arc
-		(start 280.75 234.5)
-		(mid 280.896447 234.146447)
-		(end 281.25 234)
+		(start 73.35 81.5)
+		(mid 73.496447 81.146447)
+		(end 73.85 81)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29879,8 +29876,8 @@
 		(uuid "cd832240-7594-4608-a9ae-aa459ee446dd")
 	)
 	(gr_line
-		(start 406.75 237)
-		(end 427.75 237)
+		(start 199.35 84)
+		(end 220.35 84)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -29889,8 +29886,8 @@
 		(uuid "ce761874-3115-42c7-9caa-bb36844cdb62")
 	)
 	(gr_line
-		(start 271.75 237)
-		(end 270.5 235.75)
+		(start 64.35 84)
+		(end 63.1 82.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29899,8 +29896,8 @@
 		(uuid "d591596b-b709-48fa-822f-1546057aa3d3")
 	)
 	(gr_line
-		(start 250.75 237)
-		(end 252 235.75)
+		(start 43.35 84)
+		(end 44.6 82.75)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -29909,8 +29906,8 @@
 		(uuid "d5a39d89-45ff-40e0-99d3-c19e7b65172d")
 	)
 	(gr_line
-		(start 399.25 237.5)
-		(end 399.25 237)
+		(start 191.85 84.5)
+		(end 191.85 84)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -29919,8 +29916,8 @@
 		(uuid "d61f2fb5-8c76-4283-af91-c48f644bc0aa")
 	)
 	(gr_line
-		(start 405.75 250)
-		(end 342.164213 250)
+		(start 198.35 97)
+		(end 134.764213 97)
 		(stroke
 			(width 0.05)
 			(type default)
