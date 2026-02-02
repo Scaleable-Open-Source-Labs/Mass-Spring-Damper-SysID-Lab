@@ -103,7 +103,7 @@ void generateCSV() {
 
 // Update Block3 directory entry
 // Block3, starting byte 32 defines Data_.csv
-// Bytes 37-39: Characters 6-8 of filename (currently spaces) - generate three random alphanumeric characters to append to this file (helps avoid file-overwrites when user copies data onto PC)
+// Bytes 37-39: Characters 6-8 of filename (Data_###) - generate three random alphanumeric characters to append to this file (helps avoid file-overwrites when user copies data onto PC)
 // Bytes 60-63: 4-bytes little-endian file size
 #define ROOT_DIR_BLOCK 3
 #define FILENAME_RANDOM_OFFSET 37  // Start of the 3 spaces in "DATA_   "
@@ -192,11 +192,9 @@ void setup() {
 
   // 7-segment display
   lc.shutdown(0, false);  // wakeup
-  lc.setIntensity(0, 8);  // medium brightness
+  lc.setIntensity(0, 15);  // max brightness (0 to 15)
   lc.clearDisplay(0);
 
-
-  Serial.println("=== DynaLab Initialised ===");
 }
 
 
@@ -298,10 +296,10 @@ void handleMountDriveMode() {
   if (mode != last_mode) {
     last_mode = MOUNT_DRIVE;
 
-    // Display 'USB' on 7-seg
-    lc.setRow(0, 2, 0x3E);         // U
-    lc.setDigit(0, 1, 5, false);   // S
-    lc.setChar(0, 0, 'b', false);  // b
+    // Display 'U.S.b.' on 7-seg with decimal points
+    lc.setRow(0, 2, 0x3E | 0x80);         // U.
+    lc.setDigit(0, 1, 5, true);           // S.
+    lc.setChar(0, 0, 'b', true);          // b.
 
     generateCSV();
     usb_msc.begin();
