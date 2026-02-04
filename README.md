@@ -1,3 +1,7 @@
+This is the source repo for the Mass Spring Damper SysID Lab - if you are looking for usage instructions, head to the [user-guide](https://scaleable-open-source-labs.github.io/mass-spring-damper-sysid-lab.html)
+
+---
+
 A low-cost dynamics lab that allows students to perform System Identification on a real Mass-Spring-Damper system.
 
 *Designed by Michael Ruppe for Monash University in partnership with MathWorks®*
