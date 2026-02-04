@@ -34,8 +34,10 @@
 #define LSB(x) ((x)&0xFF)
 #define MSB(x) (((x) >> 8) & 0xFF)
 
+#define DESTINATION_URL "https://scaleable-open-source-labs.github.io/mass-spring-damper-sysid-lab.html"
+
 // The readme.htm file redirects to the project repo where usage and build instructions may be maintained.
-#define README_CONTENTS "<html><head><meta http-equiv=\"refresh\" content=\"0;URL='https://github.com/michaelruppe/DynaLab'\"/></head><body>Redirecting to <a href='https://github.com/michaelruppe/DynaLab'>DynaLab Documentation</a></body></html>"
+#define README_CONTENTS "<html><head><meta http-equiv=\"refresh\" content=\"0;URL='" DESTINATION_URL "'\"/></head><body>Redirecting to <a href='" DESTINATION_URL "'>Mass Spring Damper SysID Lab Instruction Page</a></body></html>"
 
 ///------------- FAT12 Memory map -------------//
 // Block0: Boot Sector
@@ -57,10 +59,9 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
   // FAT magic code at offset 510-511
   { 0xEB, 0x3C, 0x90, 0x4D, 0x53, 0x44, 0x4F, 0x53, 0x35, 0x2E, 0x30, LSB(DISK_BLOCK_SIZE),
     MSB(DISK_BLOCK_SIZE), 0x01, 0x01, 0x00, 0x02, 0x10, 0x00, LSB(DISK_BLOCK_NUM), MSB(DISK_BLOCK_NUM), 0xF8, 0x01, 0x00,
-    //                                      ^^^^ CHANGED: 0x01 to 0x02 (2 FATs)
     0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-    0x80, 0x00, 0x29, 0x37, 0x13, 0x00, 0x00, 'D', 'Y', 'N', 'A', 'L', 'A',
-    'B', ' ', ' ', ' ', ' ', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
+    0x80, 0x00, 0x29, 0x37, 0x13, 0x00, 0x00, 'M', 'S', 'D', 'S', 'Y', 'S',
+    'I', 'D', 'L', 'A', 'B', 0x46, 0x41, 0x54, 0x31, 0x32, 0x20, 0x20, 0x20,
     0x00, 0x00,
 
     // Zero up to 2 last bytes of FAT magic code
@@ -146,7 +147,7 @@ uint8_t msc_disk[DISK_BLOCK_NUM][DISK_BLOCK_SIZE] = {
   //------------- Block3: Root Directory -------------//
   {
     // first entry is volume label
-    'D', 'Y', 'N', 'A', 'L', 'A', 'B', ' ', ' ', ' ', ' ', 0x08, 0x00, 0x00,
+    'M', 'S', 'D', '-', 'S', 'Y', 'S', '-', 'I', 'D', ' ', 0x08, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 
